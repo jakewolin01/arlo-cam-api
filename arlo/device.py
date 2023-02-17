@@ -48,7 +48,7 @@ class Device(ABC):
                 ack = arloSock.receive()
                 if (ack != None):
                     if (ack['ID'] == message['ID']):
-                        if ('Response' in ack and ack['Response'] != "Ack"):
+                        if ('Response' in ack and ack['Response'] not in ["Ack", "Ack with Errors"]):
                             s_print(f"<[{self.ip}][{self.id}] {ack['Response']}")
                             result = False
                         else:

@@ -37,3 +37,11 @@ class AudioDoorbell(Device):
         }
 
         return self.send_message(register_set)
+
+    def rtp_invite(self, args):
+        register_set = Message(copy.deepcopy(arlo.messages.AUDIO_DOORBELL_RTP_INVITE))
+        return self.send_message(register_set)
+
+    def rtp_request(self, args):
+        register_set = Message(copy.deepcopy(arlo.messages.AUDIO_DOORBELL_RTP_REQUEST))
+        return self.send_message(register_set)

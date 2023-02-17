@@ -936,8 +936,7 @@ AUDIO_DOORBELL_RTP_RESPONSE = {
     "Response": "Ack",
     "AudioStream": {
         "PayloadType": 97,
-        "PayloadTypeString":
-        "OPUS",
+        "PayloadTypeString": "OPUS",
         "Bitrate": 32000,
         "Port": 8000,  # send audio to doorbell here
         "ID": 2}
